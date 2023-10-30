@@ -16,15 +16,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="博客备份">
+    <meta name="description" content="使用branch备份博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建博客-3">
 <meta property="og:url" content="http://narrciss.github.io/2023/10/28/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="博客备份">
+<meta property="og:description" content="使用branch备份博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-28T10:30:36.000Z">
-<meta property="article:modified_time" content="2023-10-29T16:23:07.798Z">
+<meta property="article:modified_time" content="2023-10-30T07:49:57.957Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
@@ -289,10 +289,10 @@
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/553144729">Hexo博客源文件备份 - 知乎 (zhihu.com)</a></li>
 <li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1964358">Git命令手动备份Hexo博客源文件-腾讯云开发者社区-腾讯云 (tencent.com)</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wudinaniya/article/details/104125961">git 克隆指定分支代码_git clone -b-CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-basic-operations.html">Git 基本操作 | 菜鸟教程 (runoob.com)</a></li>
 </ol>
 <h3 id="备用"><a href="#备用" class="headerlink" title="备用"></a>备用</h3><ol>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/136355306">上传本地文件（夹）到GitHub和更新仓库文件 - 知乎 (zhihu.com)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-branch.html">Git 分支管理 | 菜鸟教程 (runoob.com)</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41793001/article/details/103151182">使用hexo-git-backup插件备份博客源文件-CSDN博客</a></li>
 </ol>
 <h2 id="预先处理"><a href="#预先处理" class="headerlink" title="预先处理"></a>预先处理</h2><h3 id="删除-git"><a href="#删除-git" class="headerlink" title="删除 .git"></a>删除 .git</h3><p>将hexo的主题下的<code>.git</code>删除，比如删除themes&#x2F;next&#x2F;目录下的.git否则无法将主题文件夹push。（不能重复包含.git）</p>
@@ -305,6 +305,8 @@
 <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
 <li>在git中，可利用checkout命令转换分支，该命令的作用就是切换分支或恢复工作树文件，语法为“git checkout 分支名”；当参数设置为“-b”时，可以在新分支创建的同时切换分支，语法为“git checkout -b 分支名”。</li>
 <li>origin是远程仓库的命名，你的仓库的小名。<strong>关联到远程库是git操作(远程库的分支等操作），部署是hexo操作（部署到仓库)。</strong></li>
+<li><code>git add .</code>添加当前目录下的所有文件到暂存区</li>
+<li><code>git commit </code>命令将暂存区内容添加到本地仓库中</li>
 </ol>
 <h2 id="分支的问题"><a href="#分支的问题" class="headerlink" title="分支的问题"></a>分支的问题</h2><ol>
 <li><code>ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2 (hexo)</code>命令后缀是hexo，说明源文件提交到的分支是它？但是config里部署的分支是master</li>
@@ -345,7 +347,7 @@
 
 
 
-<h2 id="克隆分支到本地"><a href="#克隆分支到本地" class="headerlink" title="克隆分支到本地"></a>克隆分支到本地</h2><p>注意不是克隆库，而是需要克隆分支。（因为我按照参考资料1使用分支保存源文件）</p>
+<h2 id="脚本备份"><a href="#脚本备份" class="headerlink" title="脚本备份"></a>脚本备份</h2><h2 id="克隆分支到本地"><a href="#克隆分支到本地" class="headerlink" title="克隆分支到本地"></a>克隆分支到本地</h2><p>注意不是克隆库，而是需要克隆分支。（因为我按照参考资料1使用分支保存源文件）</p>
 <p>使用git拉代码时可以使用 -b 指定分支指定拉 master 分支代码</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> <span class="hljs-keyword">master</span> <span class="hljs-title">http</span>://github.com/narrciss/narrciss.github.io<br></code></pre></td></tr></table></figure>
 
@@ -365,9 +367,6 @@
 
 
 
-
-
-<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">add</span> .<br>git <span class="hljs-keyword">commit</span>  -m  &quot;backup&quot;<br></code></pre></td></tr></table></figure>
 
 
                 
