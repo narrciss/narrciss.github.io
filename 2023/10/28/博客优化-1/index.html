@@ -16,15 +16,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="博客优化">
+    <meta name="description" content="博客备份">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建博客-3">
-<meta property="og:url" content="http://narrciss.github.io/2023/10/28/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:url" content="http://narrciss.github.io/2023/10/28/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="博客优化">
+<meta property="og:description" content="博客备份">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-10-28T10:30:36.000Z">
-<meta property="article:modified_time" content="2023-10-29T13:12:33.736Z">
+<meta property="article:modified_time" content="2023-10-29T16:23:07.798Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          4.7k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          27 分钟
+          40 分钟
         
       </span>
     
@@ -279,30 +279,50 @@
 <li>博客图床</li>
 <li>个性化设置，如SEO、评论系统、个人头像、博客分享、订阅功能、High功能、404网页设置等</li>
 </ol>
-<h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
+<h2 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h2><h3 id="备份原因"><a href="#备份原因" class="headerlink" title="备份原因"></a>备份原因</h3><p>上传到仓库只有生成的静态网页文件，本地的源文件删除了就不能通过git恢复了.</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ol>
 <li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1743949">Hexo搭建个人博客（备份和迁移）-腾讯云开发者社区-腾讯云 (tencent.com)</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/muzihuaner/article/details/113880440">【精选】Hexo博客的备份与恢复_hexo 博客 源丢失_木子欢儿的博客-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41793001/article/details/103151182">使用hexo-git-backup插件备份博客源文件-CSDN博客</a></li>
 <li><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440">添加远程库 - 廖雪峰的官方网站 (liaoxuefeng.com)</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/hb1993/article/details/125866995">Git 怎么切换分支_git切换branch_hb1993的博客-CSDN博客</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/whu_zhangmin/article/details/12944999">git remote命令查看远程仓库信息时，出现new ( next fetch will store in remotes&#x2F;origin)提示-CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/benben_2015/article/details/82867345">Error：pathspec ‘master’ did not match any files known to git_master did not match-CSDN博客</a>  切换分支的报错参考</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/553144729">Hexo博客源文件备份 - 知乎 (zhihu.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1964358">Git命令手动备份Hexo博客源文件-腾讯云开发者社区-腾讯云 (tencent.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wudinaniya/article/details/104125961">git 克隆指定分支代码_git clone -b-CSDN博客</a></li>
 </ol>
-<h3 id="备份原因"><a href="#备份原因" class="headerlink" title="备份原因"></a>备份原因</h3><p>上传到仓库只有生成的静态网页文件，本地的源文件删除了就不能通过git恢复了</p>
-<h2 id="预先处理"><a href="#预先处理" class="headerlink" title="预先处理"></a>预先处理</h2><h3 id="删除-git"><a href="#删除-git" class="headerlink" title="删除 .git"></a>删除 .git</h3><p>将hexo的主题下的<code>.git</code>删除，比如删除themes&#x2F;next&#x2F;目录下的.git否则无法将主题文件夹push。</p>
+<h3 id="备用"><a href="#备用" class="headerlink" title="备用"></a>备用</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/136355306">上传本地文件（夹）到GitHub和更新仓库文件 - 知乎 (zhihu.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-branch.html">Git 分支管理 | 菜鸟教程 (runoob.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41793001/article/details/103151182">使用hexo-git-backup插件备份博客源文件-CSDN博客</a></li>
+</ol>
+<h2 id="预先处理"><a href="#预先处理" class="headerlink" title="预先处理"></a>预先处理</h2><h3 id="删除-git"><a href="#删除-git" class="headerlink" title="删除 .git"></a>删除 .git</h3><p>将hexo的主题下的<code>.git</code>删除，比如删除themes&#x2F;next&#x2F;目录下的.git否则无法将主题文件夹push。（不能重复包含.git）</p>
 <h3 id="创建-gitignore"><a href="#创建-gitignore" class="headerlink" title="创建.gitignore"></a>创建.gitignore</h3><p>在本地blog文件夹下创建文件<code>.gitignore</code>（格式：所有文件），正常情况这个文件是自动生成的，打开后写入：</p>
 <figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs x86asm"><span class="hljs-meta">.DS_Store</span><br>Thumbs<span class="hljs-number">.</span><span class="hljs-built_in">db</span><br><span class="hljs-built_in">db</span><span class="hljs-number">.</span>json<br>*.log<br>node_modules/<br><span class="hljs-meta">public</span>/<br><span class="hljs-meta">.deploy</span>*/<br></code></pre></td></tr></table></figure>
 
 <p>这个文件的存在是指在push的时候忽略文件中的文件格式。</p>
-<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment">#git初始化，好像会创建一个默认仓库，如果有仓库就没有影响。</span><br>git init<br><br><span class="hljs-comment">#创建hexo分支，用来存放源码</span><br>在git中，可利用checkout命令转换分支，该命令的作用就是切换分支或恢复工作树文件，语法为“git checkout 分支名”；当参数设置为“-b”时，可以在新分支创建的同时切换分支，语法为“git checkout -b 分支名”。<br>git checkout -b hexo<br><br><span class="hljs-comment">#git 文件添加</span><br>git <span class="hljs-built_in">add</span> .<br><br><span class="hljs-comment">#git 提交</span><br>git commit -m <span class="hljs-string">&quot;backup&quot;</span><br><br><span class="hljs-comment">#添加远程仓库，github上的博客仓库 </span><br>git remote <span class="hljs-built_in">add</span> origin git@gitHub.com:用户名/仓库名.git<br><br><span class="hljs-comment">#push到hexo分支</span><br>git push origin hexo<br></code></pre></td></tr></table></figure>
+<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment">#git初始化，好像会创建一个默认仓库，如果有仓库就没有影响。</span><br>git init<br><br><span class="hljs-comment">#创建hexo分支，用来存放源码</span><br>git checkout -b hexo<br><br><span class="hljs-comment">#git 文件添加</span><br>git <span class="hljs-built_in">add</span> .<br><br><span class="hljs-comment">#git 提交</span><br>git commit -m <span class="hljs-string">&quot;backup&quot;</span><br><br><span class="hljs-comment">#添加远程仓库，github上的博客仓库 </span><br>git remote <span class="hljs-built_in">add</span> origin git@gitHub.com:用户名/仓库名.git<br><br><span class="hljs-comment">#push到hexo分支</span><br>git push origin hexo<br></code></pre></td></tr></table></figure>
 
-
-
-<h2 id="分支的问题"><a href="#分支的问题" class="headerlink" title="分支的问题"></a>分支的问题</h2><ol>
-<li><code>ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2 (hexo)</code>命令后缀是hexo，说明源文件提交到的分支是它？</li>
-<li>网页访问的仓库地址时是访问有生成文件的master分支，但是master分支为什么更新了？</li>
-<li>部署时上传</li>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
+<li>在git中，可利用checkout命令转换分支，该命令的作用就是切换分支或恢复工作树文件，语法为“git checkout 分支名”；当参数设置为“-b”时，可以在新分支创建的同时切换分支，语法为“git checkout -b 分支名”。</li>
+<li>origin是远程仓库的命名，你的仓库的小名。<strong>关联到远程库是git操作(远程库的分支等操作），部署是hexo操作（部署到仓库)。</strong></li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs sql">ASUS<span class="hljs-variable">@LAPTOP</span><span class="hljs-operator">-</span>GEMI5NEH MINGW64 <span class="hljs-operator">/</span>d<span class="hljs-operator">/</span>Blog<span class="hljs-operator">/</span>blog2 (hexo)<br>$ git checkout master<br>error: pathspec <span class="hljs-string">&#x27;master&#x27;</span> did <span class="hljs-keyword">not</span> <span class="hljs-keyword">match</span> <span class="hljs-keyword">any</span> file(s) known <span class="hljs-keyword">to</span> git<br><br>ASUS<span class="hljs-variable">@LAPTOP</span><span class="hljs-operator">-</span>GEMI5NEH MINGW64 <span class="hljs-operator">/</span>d<span class="hljs-operator">/</span>Blog<span class="hljs-operator">/</span>blog2 (hexo)<br>$ git branch <span class="hljs-operator">-</span>a<br><span class="hljs-operator">*</span> hexo<br>  remotes<span class="hljs-operator">/</span>origin<span class="hljs-operator">/</span>hexo<br><br>ASUS<span class="hljs-variable">@LAPTOP</span><span class="hljs-operator">-</span>GEMI5NEH MINGW64 <span class="hljs-operator">/</span>d<span class="hljs-operator">/</span>Blog<span class="hljs-operator">/</span>blog2 (hexo)<br>$ git remote <span class="hljs-keyword">show</span> origin<br><span class="hljs-operator">*</span> remote origin<br>  <span class="hljs-keyword">Fetch</span> URL: git<span class="hljs-variable">@github</span>.com:narrciss<span class="hljs-operator">/</span>narrciss.github.io.git<br>  Push  URL: git<span class="hljs-variable">@github</span>.com:narrciss<span class="hljs-operator">/</span>narrciss.github.io.git<br>  HEAD branch: master<br>  Remote branches:<br>    hexo   tracked<br>    master <span class="hljs-keyword">new</span> (next <span class="hljs-keyword">fetch</span> will store <span class="hljs-keyword">in</span> remotes<span class="hljs-operator">/</span>origin)<br>  <span class="hljs-keyword">Local</span> <span class="hljs-keyword">ref</span> configured <span class="hljs-keyword">for</span> <span class="hljs-string">&#x27;git push&#x27;</span>:<br>    hexo pushes <span class="hljs-keyword">to</span> hexo (up <span class="hljs-keyword">to</span> <span class="hljs-type">date</span>)<br><br>ASUS<span class="hljs-variable">@LAPTOP</span><span class="hljs-operator">-</span>GEMI5NEH MINGW64 <span class="hljs-operator">/</span>d<span class="hljs-operator">/</span>Blog<span class="hljs-operator">/</span>blog2 (hexo)<br>$ git checkout origin<span class="hljs-operator">/</span>master<br>error: pathspec <span class="hljs-string">&#x27;origin/master&#x27;</span> did <span class="hljs-keyword">not</span> <span class="hljs-keyword">match</span> <span class="hljs-keyword">any</span> file(s) known <span class="hljs-keyword">to</span> git<br><br>ASUS<span class="hljs-variable">@LAPTOP</span><span class="hljs-operator">-</span>GEMI5NEH MINGW64 <span class="hljs-operator">/</span>d<span class="hljs-operator">/</span>Blog<span class="hljs-operator">/</span>blog2 (hexo)<br>$ git checkout <span class="hljs-operator">/</span>remotes<span class="hljs-operator">/</span>origin<span class="hljs-operator">/</span>master<br>fatal: Invalid path <span class="hljs-string">&#x27;D:/Git/remotes&#x27;</span>: <span class="hljs-keyword">No</span> such file <span class="hljs-keyword">or</span> directory<br><br>ASUS<span class="hljs-variable">@LAPTOP</span><span class="hljs-operator">-</span>GEMI5NEH MINGW64 <span class="hljs-operator">/</span>d<span class="hljs-operator">/</span>Blog<span class="hljs-operator">/</span>blog2 (hexo)<br>$ git remote <span class="hljs-operator">-</span>v<br>origin  git<span class="hljs-variable">@github</span>.com:narrciss<span class="hljs-operator">/</span>narrciss.github.io.git (<span class="hljs-keyword">fetch</span>)<br>origin  git<span class="hljs-variable">@github</span>.com:narrciss<span class="hljs-operator">/</span>narrciss.github.io.git (push)<br><br></code></pre></td></tr></table></figure>
+<h2 id="分支的问题"><a href="#分支的问题" class="headerlink" title="分支的问题"></a>分支的问题</h2><ol>
+<li><code>ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2 (hexo)</code>命令后缀是hexo，说明源文件提交到的分支是它？但是config里部署的分支是master</li>
+<li>网页访问的仓库地址时是访问有生成文件的master分支，但是master分支为什么更新了？表明部署成功了</li>
+<li>我的GitHub仓库只有master和hexo两个分支，我使用hexo分支备份源文件，master分支存储生成文件，是部署同时把源文件也上传了吗？</li>
+<li>虽然本地命令行说明是hexo分支，也能达成备份和更新的目的，但我在考虑是否需要更换到master</li>
+</ol>
+<h2 id="注意是手动备份"><a href="#注意是手动备份" class="headerlink" title="注意是手动备份"></a>注意是手动备份</h2><p>也就是说需要重复备份才会更新GitHub上hexo分支上储存的源文件（查看GitHub备份的源文件后发现还是初始上传的样子），分支的问题1-3是因为没有搞清楚是手动备份，还是部署到master分支</p>
+<p>问题4有点错误，现在只是手动备份了一次。</p>
+<p>备份路径的后缀是hexo，不用修改了，以后也要手动备份到这。</p>
+<h2 id="切换分支记录"><a href="#切换分支记录" class="headerlink" title="切换分支记录"></a>切换分支记录</h2><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs scss">ASUS<span class="hljs-keyword">@LAPTOP-GEMI</span>5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git checkout master<br><span class="hljs-attribute">error</span>: pathspec <span class="hljs-string">&#x27;master&#x27;</span> did <span class="hljs-keyword">not</span> match any file(s) known to git<br><br>ASUS<span class="hljs-keyword">@LAPTOP-GEMI</span>5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git branch -a<br>* hexo<br>  remotes/origin/hexo<br><br>ASUS<span class="hljs-keyword">@LAPTOP-GEMI</span>5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git remote show origin<br>* remote origin<br>  Fetch <span class="hljs-attribute">URL</span>: git<span class="hljs-keyword">@github</span>.<span class="hljs-attribute">com</span>:narrciss/narrciss.github.io.git<br>  Push  <span class="hljs-attribute">URL</span>: git<span class="hljs-keyword">@github</span>.<span class="hljs-attribute">com</span>:narrciss/narrciss.github.io.git<br>  HEAD <span class="hljs-attribute">branch</span>: master<br>  Remote <span class="hljs-attribute">branches</span>:<br>    hexo   tracked<br>    master new (next fetch will store in remotes/origin)<br>  Local ref configured for <span class="hljs-string">&#x27;git push&#x27;</span>:<br>    hexo pushes to hexo (up to date)<br><br>ASUS<span class="hljs-keyword">@LAPTOP-GEMI</span>5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git checkout /remotes/origin/master<br><span class="hljs-attribute">fatal</span>: Invalid path <span class="hljs-string">&#x27;D:/Git/remotes&#x27;</span>: No such file <span class="hljs-keyword">or</span> directory<br><br>ASUS<span class="hljs-keyword">@LAPTOP-GEMI</span>5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git remote -v<br>origin  git<span class="hljs-keyword">@github</span>.<span class="hljs-attribute">com</span>:narrciss/narrciss.github.io.git (fetch)<br>origin  git<span class="hljs-keyword">@github</span>.<span class="hljs-attribute">com</span>:narrciss/narrciss.github.io.git (push)<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="部署时，master分支设置为追踪"><a href="#部署时，master分支设置为追踪" class="headerlink" title="部署时，master分支设置为追踪"></a>部署时，master分支设置为追踪</h3><p>不知道作用</p>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs lasso"><span class="hljs-keyword">To</span> https:<span class="hljs-comment">//github.com/narrciss/narrciss.github.io.git</span><br> + f107820<span class="hljs-params">...</span>b31a274 HEAD -&gt; master (forced update)<br>branch <span class="hljs-string">&#x27;master&#x27;</span> <span class="hljs-built_in">set</span> up <span class="hljs-keyword">to</span> track <span class="hljs-string">&#x27;https://github.com/narrciss/narrciss.github.io.git/master&#x27;</span>.<br>INFO  Deploy done: git<br><br></code></pre></td></tr></table></figure>
+
+
 
 
 
@@ -310,12 +330,44 @@
 <p>原来，git branch -a 输出的是本地仓库的远程分支信息，</p>
 <p>而git remote show origin需要联网输出实时的远程仓库的分支信息。</p>
 <p>出现new ( next fetch will store in remotes&#x2F;origin)，由于远程新增了分支，而本地并没有同步信息导致的。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash">ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git fetch origin<br>remote: Enumerating objects: 364, <span class="hljs-keyword">done</span>.<br>remote: Counting objects: 100% (364/364), <span class="hljs-keyword">done</span>.<br>remote: Compressing objects: 100% (234/234), <span class="hljs-keyword">done</span>.<br>remote: Total 364 (delta 65), reused 364 (delta 65), pack-reused 0<br>Receiving objects: 100% (364/364), 7.39 MiB | 1.68 MiB/s, <span class="hljs-keyword">done</span>.<br>Resolving deltas: 100% (65/65), <span class="hljs-keyword">done</span>.<br>From github.com:narrciss/narrciss.github.io<br> * [new branch]      master     -&gt; origin/master<br><br>ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git branch -a<br>* hexo<br>  remotes/origin/hexo<br>  remotes/origin/master<br>  <br><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash">ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git fetch origin<br>remote: Enumerating objects: 364, <span class="hljs-keyword">done</span>.<br>remote: Counting objects: 100% (364/364), <span class="hljs-keyword">done</span>.<br>remote: Compressing objects: 100% (234/234), <span class="hljs-keyword">done</span>.<br>remote: Total 364 (delta 65), reused 364 (delta 65), pack-reused 0<br>Receiving objects: 100% (364/364), 7.39 MiB | 1.68 MiB/s, <span class="hljs-keyword">done</span>.<br>Resolving deltas: 100% (65/65), <span class="hljs-keyword">done</span>.<br>From github.com:narrciss/narrciss.github.io<br> * [new branch]      master     -&gt; origin/master<br><br>ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2 (hexo)<br>$ git branch -a<br>* hexo<br>  remotes/origin/hexo<br>  remotes/origin/master<br>  <br></code></pre></td></tr></table></figure>
 
 
 
-<p>部署时，master分支设置为追踪</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs lasso"><span class="hljs-keyword">To</span> https:<span class="hljs-comment">//github.com/narrciss/narrciss.github.io.git</span><br> + f107820<span class="hljs-params">...</span>b31a274 HEAD -&gt; master (forced update)<br>branch <span class="hljs-string">&#x27;master&#x27;</span> <span class="hljs-built_in">set</span> up <span class="hljs-keyword">to</span> track <span class="hljs-string">&#x27;https://github.com/narrciss/narrciss.github.io.git/master&#x27;</span>.<br>INFO  Deploy done: git<br><br></code></pre></td></tr></table></figure>
+<h2 id="以后手动备份的操作"><a href="#以后手动备份的操作" class="headerlink" title="以后手动备份的操作"></a>以后手动备份的操作</h2><p>以后更新备份使用：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">git add .<br>git commit  -m  &quot;backup&quot;<br>git push origin 分支名 <br></code></pre></td></tr></table></figure>
+
+
+
+<p>不具体指定push的分支会报错</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Amerys/p/14669572.html">git推送代码报错：fatal: The current branch master has no upstream branch. To push the current branch and set the remote as upstream - Amerys - 博客园 (cnblogs.com)</a></p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">$ git push<br>fatal: The <span class="hljs-keyword">current</span> branch hexo has <span class="hljs-keyword">no</span> upstream branch.<br><span class="hljs-keyword">To</span> push the <span class="hljs-keyword">current</span> branch <span class="hljs-keyword">and</span> <span class="hljs-keyword">set</span> the remote <span class="hljs-keyword">as</span> upstream, use<br><br>    git push <span class="hljs-comment">--set-upstream origin hexo</span><br><br><span class="hljs-keyword">To</span> have this happen automatically <span class="hljs-keyword">for</span> branches <span class="hljs-keyword">without</span> a tracking<br>upstream, see <span class="hljs-string">&#x27;push.autoSetupRemote&#x27;</span> <span class="hljs-keyword">in</span> <span class="hljs-string">&#x27;git help config&#x27;</span>.<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="克隆分支到本地"><a href="#克隆分支到本地" class="headerlink" title="克隆分支到本地"></a>克隆分支到本地</h2><p>注意不是克隆库，而是需要克隆分支。（因为我按照参考资料1使用分支保存源文件）</p>
+<p>使用git拉代码时可以使用 -b 指定分支指定拉 master 分支代码</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> <span class="hljs-keyword">master</span> <span class="hljs-title">http</span>://github.com/narrciss/narrciss.github.io<br></code></pre></td></tr></table></figure>
+
+<p>查看当前项目拉的分支</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git branch</span><br></code></pre></td></tr></table></figure>
+
+<p>具体的分支详情</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">git branch -vv</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="恢复博客（没有尝试）"><a href="#恢复博客（没有尝试）" class="headerlink" title="恢复博客（没有尝试）"></a>恢复博客（没有尝试）</h2><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">恢复博客<br>在<span class="hljs-keyword">clone来的文件夹里执行，记得搭建环境</span><br><span class="hljs-keyword"></span><br>npm <span class="hljs-keyword">install </span>hexo-cli<br>npm <span class="hljs-keyword">install</span><br><span class="hljs-keyword"></span>npm <span class="hljs-keyword">install </span>hexo-deployer-git<br>这样博客源文件就成功移植了，再用hexo clean、hexo g、hexo d即可部署完成<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="总结命令"><a href="#总结命令" class="headerlink" title="总结命令"></a>总结命令</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git init<br>git checkout -b hexo<br>git add .<br>git commit -m <span class="hljs-string">&quot;backup&quot;</span><br>git remote add origin git@gitHub.com:用户名/仓库名.git<br>git push origin hexo<br><br>git checkout origin/<span class="hljs-keyword">master</span><br><span class="hljs-title">git</span> checkout <span class="hljs-keyword">master</span><br><br><span class="hljs-title">git</span> branch -a<br>git remote show origin<br>git remote -v<br><br>git fetch origin<br><br>git <span class="hljs-keyword">clone</span> <span class="hljs-title">-b</span> <span class="hljs-keyword">master</span> <span class="hljs-title">http</span>://github.com/narrciss/narrciss.github.io<br>git branch -vv<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="不足"><a href="#不足" class="headerlink" title="不足"></a>不足</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">git <span class="hljs-keyword">add</span> .<br>git <span class="hljs-keyword">commit</span>  -m  &quot;backup&quot;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -342,7 +394,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>搭建博客-3</div>
-      <div>http://narrciss.github.io/2023/10/28/博客优化/</div>
+      <div>http://narrciss.github.io/2023/10/28/博客优化-1/</div>
     </div>
     <div class="license-meta">
       
