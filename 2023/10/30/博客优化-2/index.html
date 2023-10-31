@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="图床搭建和使用">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/image-20231031135527629.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/image-20231031163328241.png">
 <meta property="article:published_time" content="2023-10-30T07:55:25.000Z">
-<meta property="article:modified_time" content="2023-10-31T06:18:03.281Z">
+<meta property="article:modified_time" content="2023-10-31T08:56:01.996Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/image-20231031135527629.png">
+<meta name="twitter:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/image-20231031163328241.png">
   
   
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          1.8k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          12 分钟
+          16 分钟
         
       </span>
     
@@ -280,7 +280,7 @@
 <li>博客图床</li>
 <li>个性化设置，如SEO、评论系统、个人头像、博客分享、订阅功能、High功能、404网页设置等</li>
 </ol>
-<h2 id="搭建教程参考"><a href="#搭建教程参考" class="headerlink" title="搭建教程参考"></a>搭建教程参考</h2><p>其他图床：</p>
+<h2 id="参考素材"><a href="#参考素材" class="headerlink" title="参考素材"></a>参考素材</h2><p>其他图床：</p>
 <ol>
 <li><p><a target="_blank" rel="noopener" href="https://imgse.com/page/about">关于我们 - 路过图床 (imgse.com)</a></p>
 </li>
@@ -309,19 +309,21 @@
 <li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22297992/answer/1327418986">(34 条消息) 阿里云oss好贵啊，有没有什么更好的替换方案？ - 知乎 (zhihu.com)</a></li>
 <li>[(34 条消息) 上传文件应该经过后端吗，还是直接上传至阿里oss? - 知乎 (zhihu.com)](</li>
 </ol>
-<p>参考教程：</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/524094354/answer/2408710720">(34 条消息) 有什么好用的图床推荐，gitee图床挂了吗？ - 知乎 (zhihu.com)</a><ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><ol>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/104152479">阿里云OSS PicGo 配置图床教程 超详细 - 知乎 (zhihu.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/524094354/answer/2408710720">(34 条消息) 有什么好用的图床推荐，gitee图床挂了吗？ - 知乎 (zhihu.com)</a></p>
+<ul>
 <li>全文件夹图片访问路径替换（在VSCODE脚本实现）</li>
 </ul>
 </li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/489236769">使用Github+picGo搭建图床，保姆级教程来了 - 知乎 (zhihu.com)</a><ul>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/489236769">使用Github+picGo搭建图床，保姆级教程来了 - 知乎 (zhihu.com)</a></p>
+<ul>
 <li>剪切图片到typroa，配置后可通过picgo上传至oss</li>
 </ul>
 </li>
-<li><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/oss/user-guide/faq-about-data-security/">数据安全常见问题_对象存储 OSS-阿里云帮助中心 (aliyun.com)</a></li>
 </ol>
-<p>问题：</p>
+<p>使用问题：</p>
 <ol>
 <li>bucket设置为私有链接生成不了图片，设为公有权限可以生成图片。</li>
 <li>默认流量的具体计费？</li>
@@ -329,7 +331,7 @@
 <li>其他平台从服务器是保存提交的md文件，大概不会对文件生成加载。考虑只在blog和其他平台发布文章，流量不会太多，防盗链就可以了。</li>
 <li>如何删除oss中的图片</li>
 <li>oss的文件管理，可以直接点击文件目录查看内容，防盗链的设置可能会导致图片加载失败。</li>
-<li>，及时修改上传图片名</li>
+<li>及时修改上传图片名</li>
 </ol>
 <p>picgo：</p>
 <ol>
@@ -339,7 +341,17 @@
 <li>如何获取到移除的图片预览？</li>
 <li>直接拖动图片到typroa里不会生成链接，复制到typroa里才可以。</li>
 </ol>
-<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/image-20231031135527629.png" srcset="/img/loading.gif" lazyload alt="image-20231031135527629"></p>
+<h2 id="费用详情"><a href="#费用详情" class="headerlink" title="费用详情"></a>费用详情</h2><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/oss/product-overview/resource-plan#sectiondiv-iik-5xf-jnk">资源包_对象存储 OSS-阿里云帮助中心 (aliyun.com)</a></p>
+<p>我购买的是：标准-本地冗余储存40G</p>
+<ol>
+<li>抵扣  标准-本地冗余存储类型的OSS文件或ECS快照的<strong>存储费用</strong></li>
+<li>资源类别 是 总量恒定型 资源包</li>
+<li><strong>每小时都有固定额度</strong>，剩余额度不可转移到下个小时，超出额度按量付费。（在购买该资源包后有效期的任意小时内，容量不超过40 GB的情况下，可以使用购买的存储包进行抵扣。有效期内，如果存储容量超出100 GB，则超出部分按量付费。）</li>
+</ol>
+<h3 id="明细查询"><a href="#明细查询" class="headerlink" title="明细查询"></a>明细查询</h3><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/oss/product-overview/query-bills">账单查询_对象存储 OSS-阿里云帮助中心 (aliyun.com)</a></p>
+<p>费用-》用户中心-》资源实例管理-》资源包</p>
+<p>可以查看资源包的使用明细</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/image-20231031163328241.png" srcset="/img/loading.gif" lazyload alt="image-20231031163328241"></p>
 <h2 id="报警设置"><a href="#报警设置" class="headerlink" title="报警设置"></a>报警设置</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/oss/user-guide/monitoring-service/">监控服务_对象存储 OSS-阿里云帮助中心 (aliyun.com)</a></li>
 <li><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/cms/user-guide/create-an-alert-contact-or-alert-contact-group#task-2514452">如何创建报警联系人或报警联系组_云监控-阿里云帮助中心 (aliyun.com)</a></li>
@@ -348,6 +360,16 @@
 <li>添加报警规则（按照需要选择指标，可以多个，我选择的是公网下行流量）</li>
 <li>注意只是报警，不会做更多事情（比如关闭服务）</li>
 </ol>
+<h2 id="日志系统"><a href="#日志系统" class="headerlink" title="日志系统"></a>日志系统</h2><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/cms/user-guide/log-monitoring-3/">日志监控_云监控-阿里云帮助中心 (aliyun.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/cms/use-cases/analyze-website-access-logs-and-configure-alert-rules?scm=20140722.H_55631._.ID_55631-OR_rec-V_1">通过日志监控如何实现网站访问日志的监控与报警_云监控-阿里云帮助中心 (aliyun.com)</a></p>
+<p>功能关闭。</p>
+<h2 id="处理方案"><a href="#处理方案" class="headerlink" title="处理方案"></a>处理方案</h2><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/oss/product-overview/how-do-i-deactivate-oss-or-stop-oss-charging-my-resources">如何关闭OSS服务或停止计费？_对象存储 OSS-阿里云帮助中心 (aliyun.com)</a></p>
+<p>治标：</p>
+<ol>
+<li>直接设置bucket的权限为private</li>
+<li>删除管理oss的用户，更换新的用户和key</li>
+</ol>
+<p>治本：防盗链</p>
 
                 
               </div>
