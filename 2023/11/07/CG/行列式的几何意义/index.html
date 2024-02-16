@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="搬运文章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="行列式的几何意义">
+<meta property="og:url" content="http://narrciss.github.io/2023/11/07/CG/%E8%A1%8C%E5%88%97%E5%BC%8F%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="搬运文章">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221217-789f015bfd19406482935bc1384b9111.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221220-2cb65b89f54f4d41ac20625a6f04ff96.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221223-9495bca891c845128392344653056d64.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221251-568454b194bf46dbb2327ff76999b4f5.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221348-d1351d8338034b089bbed2b1c8059564.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221413-3140c3fd00c34cde81e1563a87e8f887.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221414-7ea8a26745fc413dafbb905fa8e7aa49.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221427-61dde08cdbb54576912b46305d667aed.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221436-46d5a61553b1456da9ace01a92365572.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221439-94f0418650444f0393563c3dbbb0e21f.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221440-d3adf83a7f114d18b92eb5933545c860.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221443-34fc780202484a70aec08958e96f2c02.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221445-ef594fbef3e04f748a4aa4e0d56a7c84.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221446-81c86f29a89f435992e16c7fdd9ab8d4.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221453-ffb4a25d9ad54242b5ffd1d1c1869796.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221505-ba250f80b21c4d67ad1ca532da28fa17.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221510-5796c4536e644326bc5827fd18725ff5.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221513-e3097d8a9d8245279162136ac5a68bb2.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221519-fccfd8a5754d4fb786592ebddd1073fd.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221520-542207a22e434234b4eb2712bb2eb6fa.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221520-706292a0ee5a49f8b579b331eec40b1b.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221520-6cf6133740184013990c59943889bcbe.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221523-63d6f63fb2dd4be8965de6c73695db3c.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221527-232cdbd99faa40f4a1f4664459f2747c.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221528-34a10f4c4e9e43cfa973ff38a735fb05.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221529-114ac124ff844c25a23b15a32dd32c55.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221536-0c07cfb04cc947d8acae4b69cdb43331.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221540-5fd024bc24174975a2e4750138bdc8a3.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221545-2cd805a1c5894b8481e50bbbbade9b48.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221546-82102c4b2b5e4e4c8b19e3bb7a13a385.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221547-498452e3b4e4480e9350fdbc2c714598.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221555-ba091fe102ff4aa3b8b4f6e87d2c75f9.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221556-e839f7b866e44a21991a0a15ad6d212a.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221557-a1043f7feb2e44a5825c86d2b1df53e3.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221600-44afd45f4d06483c8a18b135a5052e8e.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221601-196221fb81d54bf88b258996c463125a.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221602-eb60a6278ec44e049dd8f9ecaa255502.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221603-5f368b166f684b0d951c0d5c5c917dc2.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221603-ccb0d7a9ca6449f09c6d21c738d7dc59.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221604-a801d162eaa34d6d802011df346dd7c0.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221605-643ece6a14624900b733f92ec1d47fdb.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221608-c92bdc235f9843c591f9a774776bbdd4.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221609-aa520380aca04ff798a51181a9da4d5f.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221609-b0b70418050a4f57827adbf0fea5342a.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221610-ba537b74234140858a39e4e9d2883b9f.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221611-ccc53caf6d4f466ca1fd339d5fc768c3.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221617-6328e51052044344ad27566dba959f6d.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221619-acea19577cbd40749a4cbef24681a48d.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221624-64c266e3e88848209e3b819c1c4ecd53.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221626-9474431858f942569b6986a3caa430db.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221629-c67dc13d3b254918831a064947ad9c35.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221631-9664ed6b6e7a4e29856458a135c33021.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221632-802325b452184b1e893fbaa78184b006.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221653-4d7afb8f1fb2479a9827ae7514e7f7dd.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221658-9cb7f9ed28514a309614f0f706af7863.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221658-0ebf8b7519434fcda4ce3b07b1ac6117.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221659-5ef769c18bab4bfa828903f3ed152985.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221701-1ec3651a7f5641f59f5b1756c13d6730.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221705-761a4450fbca4629a832ec02c54611cd.png">
+<meta property="og:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221705-253348aee112464e8217fc7f91ab53b5.png">
+<meta property="article:published_time" content="2023-11-07T04:56:35.000Z">
+<meta property="article:modified_time" content="2023-11-07T05:01:24.334Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="几何意义">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221217-789f015bfd19406482935bc1384b9111.png">
+  
+  
+  
+  <title>行列式的几何意义 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"narrciss.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="行列式的几何意义"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-07 12:56" pubdate>
+          2023年11月7日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">行列式的几何意义</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>原文链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/AndyJee/p/3491487.html#4291028">【线性代数的几何意义】行列式的几何意义 - AndyJee - 博客园 (cnblogs.com)</a></p>
+<h1 id="三、行列式的几何意义："><a href="#三、行列式的几何意义：" class="headerlink" title="三、行列式的几何意义："></a>三、行列式的几何意义：</h1><p><strong>行列式的定义：</strong></p>
+<p>行列式是由一些数据排列成的方阵经过规定的计算方法而得到的一个数。当然，如果行列式中含有未知数，那么行列式就是一个多项式。它本质上代表一个数值，这点请与矩阵区别开来。矩阵只是一个数表，行列式还要对这个数表按照规则进一步计算,最终得到一个实数、复数或者多项式。</p>
+<p>一阶行列式</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221217-789f015bfd19406482935bc1384b9111.png" srcset="/img/loading.gif" lazyload alt="img">（注意不是绝对值）</p>
+<p>二阶行列式</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221220-2cb65b89f54f4d41ac20625a6f04ff96.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>三阶行列式</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221223-9495bca891c845128392344653056d64.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>N阶行列式</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221251-568454b194bf46dbb2327ff76999b4f5.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>行列式的几何意义是什么呢？</p>
+<p>概括说来有两个解释：</p>
+<p>一个解释是行列式就是行列式中的行或列向量所构成的超平行多面体的有向面积或有向体积；</p>
+<p>另一个解释是矩阵A的行列式detA就是线性变换A下的图形面积或体积的伸缩因子。</p>
+<p>这两个几何解释一个是静态的体积概念，一个是动态的变换比例概念。但具有相同的几何本质，因为矩阵A表示的（矩阵向量所构成的）几何图形相对于单位矩阵E的所表示的单位面积或体积（即正方形或正方体或超立方体的容积等于1）的几何图形而言，伸缩因子本身就是矩阵矩阵A表示的几何图形的面积或体积，也就是矩阵A的行列式。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221348-d1351d8338034b089bbed2b1c8059564.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221413-3140c3fd00c34cde81e1563a87e8f887.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>二阶行列式的几何意义：</strong></p>
+<p>二阶行列式<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221414-7ea8a26745fc413dafbb905fa8e7aa49.png" srcset="/img/loading.gif" lazyload alt="img">的几何意义是xoy平面上以行向量<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221427-61dde08cdbb54576912b46305d667aed.png" srcset="/img/loading.gif" lazyload alt="img">为邻边的平行四边形的有向面积。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221436-46d5a61553b1456da9ace01a92365572.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>二阶行列式的几何意义就是由行列式的向量所张成的平行四边形的面积。另外，两个向量的叉积也是这个公式。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221439-94f0418650444f0393563c3dbbb0e21f.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>二阶行列式的另一个意义就是是两个行向量或列向量的叉积的数值，这个数值是z轴上（在二维平面上，z轴的正向想象为指向读者的方向）的叉积分量。如果数值是正值，则与z坐标同向；负值就与z坐标反向。如果我们不强调叉积是第三维的向量，也就是忽略单位向量<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221440-d3adf83a7f114d18b92eb5933545c860.png" srcset="/img/loading.gif" lazyload alt="img">，那么二阶行列式就与两个向量的叉积完全等价了。</p>
+<p><strong>二阶行列式性质的几何解释：</strong></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221443-34fc780202484a70aec08958e96f2c02.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221445-ef594fbef3e04f748a4aa4e0d56a7c84.png" srcset="/img/loading.gif" lazyload alt="img"><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221446-81c86f29a89f435992e16c7fdd9ab8d4.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221453-ffb4a25d9ad54242b5ffd1d1c1869796.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221505-ba250f80b21c4d67ad1ca532da28fa17.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221510-5796c4536e644326bc5827fd18725ff5.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221513-e3097d8a9d8245279162136ac5a68bb2.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>两向量在同一条直线上，显然围成的四边形的面积为零，因此行列式为零</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221519-fccfd8a5754d4fb786592ebddd1073fd.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>这个性质由行列式的叉积特性得到，交换行列式的两行，就是改变了向量a和向量b的叉积顺序，根据<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221520-542207a22e434234b4eb2712bb2eb6fa.png" srcset="/img/loading.gif" lazyload alt="img">，因此行列式换号。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221520-706292a0ee5a49f8b579b331eec40b1b.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>把行列式的一行的k倍加到另一行，则行列式值不变，即<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221520-6cf6133740184013990c59943889bcbe.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221523-63d6f63fb2dd4be8965de6c73695db3c.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221527-232cdbd99faa40f4a1f4664459f2747c.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>矩阵的行列式等于其转置矩阵的行列式（根据行列式的定义可证）</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221528-34a10f4c4e9e43cfa973ff38a735fb05.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221529-114ac124ff844c25a23b15a32dd32c55.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>总结：</p>
+<p>（1）用一个数k乘以向量a,b中之一的a，则平行四边形的面积就相应地增大了k倍；</p>
+<p>（2）把向量a,b中的一个乘以数k之后加到另一个上，则平行四边形的面积不变；</p>
+<p>（3）以单位向量(1，0)，(0，1)构成的平行四边形(即单位正方形)的面积为1。</p>
+<p><strong>三阶行列式的几何意义：</strong></p>
+<p>一个3×3阶的行列式是其行向量或列向量所张成的平行六面体的有向体积。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221536-0c07cfb04cc947d8acae4b69cdb43331.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221540-5fd024bc24174975a2e4750138bdc8a3.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>一个行列式可以通过拆分某一个列向量得到两个行列式的和</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221545-2cd805a1c5894b8481e50bbbbade9b48.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221546-82102c4b2b5e4e4c8b19e3bb7a13a385.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>行列式的有两行或者两列元素相同，它对应的空间平行六面体的两条邻边重合，相当于三维空间中六面体被压成了高度为零的二维平面，显然，这个平面的三维体积<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221547-498452e3b4e4480e9350fdbc2c714598.png" srcset="/img/loading.gif" lazyload alt="img">为零。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221555-ba091fe102ff4aa3b8b4f6e87d2c75f9.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221556-e839f7b866e44a21991a0a15ad6d212a.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>一个行列式对应着一个数值，这个数值是对行列式中的元素经过运算得到的。这个运算是与元素的位置有关系的，因此你改变了行列式中列向量或行向量的位置当然会改变行列式的结果。幸而只改变结果的符号。一般地，一个行列式的值对应矩阵A的列向量的一个固定顺序。当detA为负值时，它确定原象的一个反射。所以，这种变换改变了原象的定向。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221557-a1043f7feb2e44a5825c86d2b1df53e3.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221600-44afd45f4d06483c8a18b135a5052e8e.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221601-196221fb81d54bf88b258996c463125a.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>这就是说，平行六面体的体积的k倍等于六面体的三条棱中一条棱长的k倍。这是显然的。因为立方体的体积增大可以沿着立方体某一棱方向增大相同的倍数。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221602-eb60a6278ec44e049dd8f9ecaa255502.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221603-5f368b166f684b0d951c0d5c5c917dc2.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>此性质表述了以<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221603-ccb0d7a9ca6449f09c6d21c738d7dc59.png" srcset="/img/loading.gif" lazyload alt="img">为底面积的平行六面体在a方向上进行了切向变换，变换的后的六面体因为底面积不变，高也不变，因此体积不变。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221604-a801d162eaa34d6d802011df346dd7c0.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221605-643ece6a14624900b733f92ec1d47fdb.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>矩阵A的行列式等于矩阵A转置的行列式</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221608-c92bdc235f9843c591f9a774776bbdd4.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>行列式化为对角形的几何解释：</strong></p>
+<p>一个行列式的第i行加上j行的K倍，可以使第i行的某一个元素变为0，而这个行列式的值不变。这个性质在化简行列式时非常有用。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221609-aa520380aca04ff798a51181a9da4d5f.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>一个二阶行列式所表示的平行四边形被变成了一个对角行列式所表示的正（长）方形。</p>
+<p>三阶行列式有类似的变换情形，对角化的过程会把一个平行六面体变化为一个等体积的立方体或长方体。</p>
+<p>那么n阶行列式我们亦不怀疑的认为也可以被表示成一个n维的长方体的几何图形。</p>
+<p><strong>二阶行列式乘积项的几何意义：</strong></p>
+<p>对于二阶行列式而言，既然二阶行列式的几何图形是一个有方向的面积，那么从二阶行列式公理化定义<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221609-b0b70418050a4f57827adbf0fea5342a.png" srcset="/img/loading.gif" lazyload alt="img">−看，又是如何构成这个面积的呢？显然，式中<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221610-ba537b74234140858a39e4e9d2883b9f.png" srcset="/img/loading.gif" lazyload alt="img">项和<img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221611-ccc53caf6d4f466ca1fd339d5fc768c3.png" srcset="/img/loading.gif" lazyload alt="img">项的和构成了这个面积。（面积方向的确定：叉积的右手定则）</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221617-6328e51052044344ad27566dba959f6d.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>三阶行列式乘积项的几何意义：</strong></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221619-acea19577cbd40749a4cbef24681a48d.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>与二阶行列式的乘积项的几何解释类似，三阶行列式的乘积项，可以看成具有有方向的小长方体的体积。也就是说，在三阶方阵张成的三维平行六面体可以分解为一个个由各座标分量混合积构成的小长方体。这些小长方体共有六块，其体积具有方向。</p>
+<p><strong>n阶行列式乘积项的几何意义：</strong></p>
+<p>N阶行列式的超平行多面体的几何图形是由行(或列)向量张成的，而且这个n维超平行多面体与一个n维超长方体等体积。</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221624-64c266e3e88848209e3b819c1c4ecd53.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>比如一个二阶行列式可以分拆成两个这样的二阶对角行列式：</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221626-9474431858f942569b6986a3caa430db.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>一个三阶行列式可以拆分成六个（其余的行列式值等于零）三阶对角行列式：</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221629-c67dc13d3b254918831a064947ad9c35.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>一个行列式的整体几何意义是有向线段（一阶行列式）或有向面积（二阶行列式）或有向体积（三阶行列式及以上）。</p>
+<p>因此，行列式最基本的几何意义是由各个坐标轴上的有向线段所围起来的所有有向面积或有向体积的累加和。这个累加要注意每个面积或体积的方向或符号，方向相同的要加，方向相反的要减，因而，这个累加的和是代数和。</p>
+<p><strong>克莱姆法则的几何意义：</strong></p>
+<p>1750年，瑞士的克莱姆发现了用行列式求解现行方程组的克莱姆（Cramer）法则。这个法则在表述上简洁自然，思想深刻，包含了对多重行列式的计算，是对行列式与线性方程组之间关系的深刻理解。如果我们不能从几何上解释这个法则，就不可能领会向量、行列式和线性方程组之间的真正关系。</p>
+<p><strong>二阶克莱姆法则的几何解释：</strong></p>
+<p><strong>二阶线性方程组：</strong></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221631-9664ed6b6e7a4e29856458a135c33021.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>其克莱姆法则的解：</strong></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221632-802325b452184b1e893fbaa78184b006.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221653-4d7afb8f1fb2479a9827ae7514e7f7dd.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221658-9cb7f9ed28514a309614f0f706af7863.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221658-0ebf8b7519434fcda4ce3b07b1ac6117.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221659-5ef769c18bab4bfa828903f3ed152985.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221701-1ec3651a7f5641f59f5b1756c13d6730.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><strong>三阶克莱姆法则的几何解释：</strong></p>
+<p>三阶线性方程组如下：</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221705-761a4450fbca4629a832ec02c54611cd.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>其克莱姆法则的解：</p>
+<p><img src="https://narrciss.oss-cn-guangzhou.aliyuncs.com/blog/25221705-253348aee112464e8217fc7f91ab53b5.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>过程与二阶类似，参考二阶的推导过程。</p>
+<p>克莱姆法则的意义是可以用方程组的系数和常数项的行列式把方程组的解简洁的表达出来。但在实际工程应用中由于计算量较大，常常采用高斯消元法来解大型的线性方程组。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89/" class="print-no-link">#几何意义</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>行列式的几何意义</div>
+      <div>http://narrciss.github.io/2023/11/07/CG/行列式的几何意义/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/11/08/CG/3d%E6%95%B0%E5%AD%A6/" title="3d数学基础，图形与游戏开发">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">3d数学基础，图形与游戏开发</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/11/06/git%E4%BD%BF%E7%94%A8/" title="git使用">
+                        <span class="hidden-mobile">git使用</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

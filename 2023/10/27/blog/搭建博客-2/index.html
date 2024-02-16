@@ -16,22 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="知乎中有点用的东西，作为脱离平台的收藏夹。">
+    <meta name="description" content="捉bug">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信息收集-知乎">
-<meta property="og:url" content="http://narrciss.github.io/2023/10/28/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86-%E7%9F%A5%E4%B9%8E/index.html">
+<meta property="og:title" content="搭建博客-2">
+<meta property="og:url" content="http://narrciss.github.io/2023/10/27/blog/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="知乎中有点用的东西，作为脱离平台的收藏夹。">
+<meta property="og:description" content="捉bug">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-28T11:13:26.000Z">
-<meta property="article:modified_time" content="2023-11-05T10:00:00.642Z">
+<meta property="article:published_time" content="2023-10-27T12:48:40.000Z">
+<meta property="article:modified_time" content="2023-10-28T10:17:00.547Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="信息收集">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>信息收集-知乎 - Hexo</title>
+  <title>搭建博客-2 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="信息收集-知乎"></span>
+            <span id="subtitle" data-typed-text="搭建博客-2"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-28 19:13" pubdate>
-          2023年10月28日 晚上
+        <time datetime="2023-10-27 20:48" pubdate>
+          2023年10月27日 晚上
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          38 字
+          2.8k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          1 分钟
+          24 分钟
         
       </span>
     
@@ -268,12 +268,73 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">信息收集-知乎</h1>
+            <h1 id="seo-header">搭建博客-2</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/50408698/answer/2997610936">(30 条消息) 有哪些你看了以后大呼过瘾的编程书？ - 知乎 (zhihu.com)</a></p>
+                <h2 id="静态页面刷新问题"><a href="#静态页面刷新问题" class="headerlink" title="静态页面刷新问题"></a>静态页面刷新问题</h2><p>直接提示用户刷新一下不久好了？</p>
+<p>相关链接：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37750806/article/details/119269635">Html静态页面更新，解决浏览器缓存不更新问题_html强制刷新多个css缓存-CSDN博客</a></li>
+<li>GPT问答。问：静态页面在加载后，过段时间再次访问该网站是不是只会加载静态页面的缓存而不进行更新</li>
+</ol>
+<p>是的，当浏览器加载一个静态页面后，它会将页面的资源（例如HTML、CSS、JavaScript文件）存储在缓存中。如果你在一段时间后再次访问同样的网站，浏览器会首先检查缓存是否存在该页面的副本。如果存在，并且缓存仍然有效（根据资源的缓存策略），浏览器将直接从缓存中加载页面，而不会向服务器发起新的请求。</p>
+<p>这种行为可以提高网页的加载速度和减轻服务器的负担。然而，这也意味着当你对静态页面进行更新时，用户可能无法立即看到最新的内容，直到浏览器的缓存过期或被清除为止。</p>
+<p>如果你希望在访问静态页面时总是获取最新的内容，可以通过一些方法来解决缓存问题，如修改文件的URL、使用版本号或哈希值追加到文件名中、设置HTTP头信息等，来告诉浏览器获取最新的资源。这样可以确保用户始终获得更新后的页面内容。</p>
+<p>另外，对于开发和测试阶段，你可以使用浏览器的开发者工具来禁用缓存，以便每次刷新页面时都从服务器获取最新的资源。</p>
+<h2 id="新建的blog可以预览但使用hexo-d命令没有更新GitHub"><a href="#新建的blog可以预览但使用hexo-d命令没有更新GitHub" class="headerlink" title="新建的blog可以预览但使用hexo d命令没有更新GitHub"></a>新建的blog可以预览但使用hexo d命令没有更新GitHub</h2><p>记得检查_config.yml配置</p>
+<figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">deploy</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">type</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#x27;git&#x27;</span><br>  <span class="hljs-attribute">repo</span><span class="hljs-punctuation">:</span> <span class="hljs-string">https://github.com/用户名/用户名.github.io.git</span><br>  <span class="hljs-attribute">branch</span><span class="hljs-punctuation">:</span> <span class="hljs-string">master</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="使用fluid主题，source里的about文件夹里的index-md不能使用typora打开，会出现编码错误"><a href="#使用fluid主题，source里的about文件夹里的index-md不能使用typora打开，会出现编码错误" class="headerlink" title="使用fluid主题，source里的about文件夹里的index.md不能使用typora打开，会出现编码错误"></a>使用fluid主题，source里的about文件夹里的index.md不能使用typora打开，会出现编码错误</h2><h2 id="报错-FATAL-YAMLException-duplicated-mapping"><a href="#报错-FATAL-YAMLException-duplicated-mapping" class="headerlink" title="报错-FATAL-YAMLException-duplicated-mapping"></a>报错-FATAL-YAMLException-duplicated-mapping</h2><p>配置文件有重复代码，删除即可。</p>
+<h2 id="YAMLException-can-not-read-a-block-mapping-entry"><a href="#YAMLException-can-not-read-a-block-mapping-entry" class="headerlink" title="YAMLException: can not read a block mapping entry;"></a>YAMLException: can not read a block mapping entry;</h2><p>解决方法：使用vscode打开，检查是否有编码错误和缺失空格</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">ERROR </span>Process failed: _posts/搭建博客<span class="hljs-string">-2</span>.md<br>YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key (5:1)<br><br> 2 | date: 2023<span class="hljs-string">-10</span><span class="hljs-string">-27</span> 20:48:40<br> 3 | tags: blog<br> 4 | excerpt:捉bug。<br> 5 |<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="删除blog文件与卸载hexo"><a href="#删除blog文件与卸载hexo" class="headerlink" title="删除blog文件与卸载hexo"></a>删除blog文件与卸载hexo</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/49715656"> 如何干净的卸载 HEXO？ - 知乎 (zhihu.com)</a></p>
+<p>命令提示符中，</p>
+<figure class="highlight bnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bnf">npm uninstall hexo-cli -g<br></code></pre></td></tr></table></figure>
+
+<p>然后文件夹中的blog，手动删除。</p>
+<p>另外，进行重装之前，如果还是在原来位置，必须手动清理了才能迁移安装。</p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2140491">Hexo博客彻底删除文章教程-腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+<p>手动删除本地文件后直接与GitHub同步</p>
+<h2 id="Connection-was-reset"><a href="#Connection-was-reset" class="headerlink" title="Connection was reset"></a>Connection was reset</h2><p>报错提示</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit">fatal: unable to access &#x27;https://github.com/narrciss/narrciss.github.io.git/&#x27;: Recv failure: Connection was reset<br>FATAL Something&#x27;s wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html<br><span class="hljs-keyword">Error: </span>Spawn failed<br></code></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vhdl">fatal: unable <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> <span class="hljs-symbol">&#x27;https</span>://github.com/narrciss/narrciss.github.io.git/&#x27;: Failed <span class="hljs-keyword">to</span> connect <span class="hljs-keyword">to</span> github.com <span class="hljs-keyword">port</span> <span class="hljs-number">443</span> <span class="hljs-keyword">after</span> <span class="hljs-number">21113</span> ms: Couldn<span class="hljs-symbol">&#x27;t</span> connect <span class="hljs-keyword">to</span> server<br>FATAL Something<span class="hljs-symbol">&#x27;s</span> wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html<br><span class="hljs-literal">Error</span>: Spawn failed<br></code></pre></td></tr></table></figure>
+
+<p>一段时间后又恢复，大概是端口占用问题，具体是哪个端口记得是443？</p>
+<p>相关链接</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/commshare/article/details/130523009">【github】Connection reset by 20.205.243.160 port 443_等风来不如迎风去的博客-CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/algebra007/article/details/119242167">如何查看端口被哪个进程占用（Windows&#x2F;Linux）_查看占用端口_天下溪-algebra的博客-CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/windows-finds-port-usage.html">Windows下如何查看某个端口被谁占用 | 菜鸟教程 (runoob.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/654998555">报错处理-Recv failure Connection was reset - 知乎 (zhihu.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/good_good_xiu/article/details/118567249">git提交或克隆报错fatal: unable to access ‘https://github.com/tata20191003/autowrite.git/‘: Failed to connec_fatal: unable to access ‘https://github.com/whldk/_good_good_xiu的博客-CSDN博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44223180/article/details/133059575">【完美解决】GitHub连接超时问题 Recv failure: Connection was reset_github请求超时-CSDN博客</a></li>
+</ol>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ol>
+<li>使用devsidecar的git.exe加速</li>
+<li>本机代理（方法6，结果失败）</li>
+</ol>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros">ASUS@LAPTOP-GEMI5NEH MINGW64 /d/Blog/blog2<br>$ git<span class="hljs-built_in"> config </span>--global -l<br>user.<span class="hljs-attribute">name</span>=narrciss<br>user.<span class="hljs-attribute">email</span>=2576124017@qq.com<br>http.<span class="hljs-attribute">sslverify</span>=<span class="hljs-literal">true</span><br>http.<span class="hljs-attribute">proxy</span>=http://127.0.0.1:7890<br></code></pre></td></tr></table></figure>
+
+<p>代理ip地址有</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-keyword">http</span>=<span class="hljs-keyword">http</span>://<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">7920</span>;<span class="hljs-keyword">https</span>=<span class="hljs-keyword">http</span>://<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">31181</span><br></code></pre></td></tr></table></figure>
+
+<p>报错为</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vhdl">fatal: unable <span class="hljs-keyword">to</span> <span class="hljs-keyword">access</span> <span class="hljs-symbol">&#x27;https</span>://github.com/narrciss/narrciss.github.io.git/&#x27;: Failed <span class="hljs-keyword">to</span> connect <span class="hljs-keyword">to</span> <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> <span class="hljs-keyword">port</span> <span class="hljs-number">7890</span> <span class="hljs-keyword">after</span> <span class="hljs-number">2047</span> ms: Couldn<span class="hljs-symbol">&#x27;t</span> connect <span class="hljs-keyword">to</span> server<br>FATAL Something<span class="hljs-symbol">&#x27;s</span> wrong. Maybe you can find the solution here: https://hexo.io/docs/troubleshooting.html<br><span class="hljs-literal">Error</span>: Spawn failed<br></code></pre></td></tr></table></figure>
+
+<p>恢复原有状态</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/107323951">git 设置和取消指定域名代理 - git config proxy - 知乎 (zhihu.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7216147029230993445">Git配置代理和取消的两种方法 - 掘金 (juejin.cn)</a></li>
+</ol>
 
                 
               </div>
@@ -286,7 +347,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/" class="print-no-link">#信息收集</a>
+        <a href="/tags/blog/" class="print-no-link">#blog</a>
       
     </div>
   
@@ -298,8 +359,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>信息收集-知乎</div>
-      <div>http://narrciss.github.io/2023/10/28/信息收集-知乎/</div>
+      <div>搭建博客-2</div>
+      <div>http://narrciss.github.io/2023/10/27/blog/搭建博客-2/</div>
     </div>
     <div class="license-meta">
       
@@ -311,7 +372,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月28日</div>
+          <div>2023年10月27日</div>
         </div>
       
       
@@ -343,9 +404,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/30/blog/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-2/" title="博客优化-2">
+                      <a href="/2023/10/28/blog/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-1/" title="博客优化-3">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">博客优化-2</span>
+                        <span class="hidden-mobile">博客优化-3</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -353,8 +414,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/28/blog/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-1/" title="博客优化-3">
-                        <span class="hidden-mobile">博客优化-3</span>
+                      <a href="/2023/10/25/blog/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-1/" title="搭建博客-1">
+                        <span class="hidden-mobile">搭建博客-1</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
